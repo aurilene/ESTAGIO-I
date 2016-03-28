@@ -86,7 +86,7 @@ function scene:create( event )
 end
 
 
- --Movimentos dos player
+ --Movimento Touch
  
 local screen_tap = function( event )
 		player:setLinearVelocity( 0, 0)
@@ -164,6 +164,8 @@ scene:addEventListener( "create", scene )
 scene:addEventListener( "show", scene )
 scene:addEventListener( "hide", scene )
 scene:addEventListener( "destroy", scene )
+borderLeft.collision = onLocalCollision
+borderLeft:addEventListener("collision",borderLeft )
 
 -----------------------------------------------------------------------------------------
 
